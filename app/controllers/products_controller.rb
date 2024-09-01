@@ -14,4 +14,19 @@ class ProductsController < ApplicationController
     @product.save
     render template: "products/show"
   end
+  def update
+    @product = Product.find_by(id: params[:id])
+    @product.name = params[:title]
+    @product.price = params[:price]
+    @product.description = params[:description]
+    @product.image_url = params[:image_url]
+    @product.save
+    render template: "recipes/show"
+
+  end
+  def destroy
+    @product = Product.find_by(id: params[:id])
+    @product.destroy
+    render json: {message: "Product has been removed."}
+  end
 end
