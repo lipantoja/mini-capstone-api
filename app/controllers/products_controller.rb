@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    render template: "recipes/index"
+    # render template: "products/index"
+    render :index
   end
   def create
     p params[:name]
@@ -21,7 +22,7 @@ class ProductsController < ApplicationController
     @product.description = params[:description]
     @product.image_url = params[:image_url]
     @product.save
-    render template: "recipes/show"
+    render template: "products/show"
 
   end
   def destroy
