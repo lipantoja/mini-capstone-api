@@ -6,7 +6,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal Photo.count, data.length
+    assert_equal Product.count, data.length
   end
   test "create" do
     assert_difference "Product.count", 1 do
