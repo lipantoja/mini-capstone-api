@@ -14,4 +14,10 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
     end
   end
+  test "create" do
+    assert_difference "Product.count", 1 do
+      post "/products.json", params: { name: "lake", width: 800, height: 600 }
+      assert_response 200
+    end
+  end
 end
