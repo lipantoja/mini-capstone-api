@@ -3,8 +3,8 @@ class Product < ApplicationRecord
   validates :price, presence: {greater_than: 0}
   validates :name, presence: true
   validates :name,
-  validates :description, presence: true
-  validates :description, length: { in: 1..500}
+  # validates :description, presence: true ## Error on this line 
+  # validates :description, length: { in: 1..500} 
   def is_discounted?
     if price <= 10
       return true

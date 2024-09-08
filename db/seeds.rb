@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+supplier = Supplier.new(
+  name: "Gordan Foods",
+  email: "gordan@gfs.com",
+  phone_number: "5555555000"
+)
+supplier.save
