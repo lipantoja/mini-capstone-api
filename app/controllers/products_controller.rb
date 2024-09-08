@@ -30,4 +30,9 @@ class ProductsController < ApplicationController
     @product.destroy
     render json: {message: "Product has been removed."}
   end
+  if @product.save
+    render:show
+  else
+    render json: {errors: @porduct.errors.full_messages}, status: :unpreocessable_entity
+  end
 end
