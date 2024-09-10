@@ -12,9 +12,13 @@ class ProductsController < ApplicationController
       description: params[:description],
       image_url: params[:image_url],
     )
-    @product.save
-    render template: "products/show"
+    if @product.save
+      render:show
+    else
+      render json: {errors: @product.errors.full_messages}, status: :unpreocessable_entity
+    end
   end
+
   def update
     @product = Product.find_by(id: params[:id])
     @product.name = params[:title]
@@ -25,14 +29,10 @@ class ProductsController < ApplicationController
     render template: "products/show"
 
   end
+  
   def destroy
     @product = Product.find_by(id: params[:id])
     @product.destroy
     render json: {message: "Product has been removed."}
-  end
-  if @product.save
-    render:show
-  else
-    render json: {errors: @porduct.errors.full_messages}, status: :unpreocessable_entity
   end
 end

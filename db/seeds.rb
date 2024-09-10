@@ -7,10 +7,18 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+product = Product.new(
+  name:"Mask",
+  price: 5,
+  image_url: "https://i.etsystatic.com/12262653/r/il/354d6f/4786069627/il_1588xN.4786069627_t8fl.jpg",
+  description:"Mask of a fox",
+)
+product.save
+
 
 supplier = Supplier.new(
-  name: "Gordan Foods",
-  email: "gordan@gfs.com",
-  phone_number: "5555555000"
+  name: "Party City",
+  email: "partyCity@gmail.com",
+  phone_number: "5555556000"
 )
 supplier.save
