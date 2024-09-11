@@ -12,4 +12,8 @@ class Product < ApplicationRecord
       return false
     end
   end
+  belongs_to :supplier # something is wrong here per error in httpie when products
+  # def supplier
+    # Supplier.find_by(id: supplier_id)
+  # end
 end
