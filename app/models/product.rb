@@ -12,6 +12,11 @@ class Product < ApplicationRecord
       return false
     end
   end
+  def total
+    tax = price.to_i * 0.09
+    total = tax + price
+    p "The total (including tax) is: $#{total}"
+  end
   belongs_to :supplier # something is wrong here per error in httpie when products
   # def supplier
     # Supplier.find_by(id: supplier_id)
