@@ -15,3 +15,5 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 end
+
+# compare to "https://github.com/actualize-evn-2024-07/demo-mini-capstone-api/blob/main/test/controllers/products_controller_test.rb"
