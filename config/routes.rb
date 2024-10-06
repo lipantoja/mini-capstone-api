@@ -13,14 +13,15 @@ Rails.application.routes.draw do
   #----Supplier -------
   get "/suppliers" => "suppliers#index"
   get "/suppliers/:id" => "suppliers#show"
-  #------
+  #------USERS
   post "/users" => "users#create"
-  #------
+  #------SESSIONS
   post "sessions" =>"session#create"
-  #------
+  #------ORDERS
   get "/orders" => "orders#index" 
   get "/orders/:id" => "orders#show"
   post "/orders" => "orders#create"
+  #-------
 
 
   # Defines the root path route ("/")
