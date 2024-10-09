@@ -9,3 +9,4 @@ json.description product.description
 json.total product.total #error here?
 json.supplier product.supplier
 json.supplier_id product.supplier_id
+json.categories product.categories
