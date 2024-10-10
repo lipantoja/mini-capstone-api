@@ -1,0 +1,2 @@
+class RemoveQuantityFromOrdersTable < ApplicationRecord
+end
