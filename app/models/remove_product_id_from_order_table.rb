@@ -1,0 +1,2 @@
+class RemoveProductIdFromOrderTable < ApplicationRecord
+end
