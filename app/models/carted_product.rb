@@ -1,3 +1,3 @@
 class CartedProduct < ApplicationRecord
-  belongs_to:order, option:true
+  # belongs_to:order, option:true
 end
